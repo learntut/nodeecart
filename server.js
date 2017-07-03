@@ -2,13 +2,11 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
-
 // var favicon = require('favicon');
 var exphbs = require('express-handlebars');
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/ShoppingCart');
 var category = require('./server/category/route');
-
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
@@ -31,8 +29,9 @@ app.engine('hbs',hbsengine.engine);
 app.set('view engine','hbs');
 // set application properties
 // app.use(favicon())
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded());
+app.use(express.bodyParser());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname,'public')));
 // app.use(category);

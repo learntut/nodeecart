@@ -2,9 +2,9 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var CategorySchema = new Schema({
-	name: String,
+	Categoryname: String,
+	Title : String,
 	Image: String,
-	ParentCategory: Number,
 	Category: Number,
 	active: {type: Boolean, default :true},
 	updated: {type: Date,   default: Date.now}

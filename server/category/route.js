@@ -1,14 +1,24 @@
 var express = require('express');
 var controller = require('./category.controller');
 var router = express.Router();
+var methodOverride = require('method-override');
+// router.use(methodOverride(function(req, res){
+//       if (req.body && typeof req.body === 'object' && '_method' in req.body) {
+//         // look in urlencoded POST bodies and delete it
+//         var method = req.body._method
+//         delete req.body._method
+//         return method
+//       }
+// }));
 
 module.exports = function(app) {
 	router.get('/', controller.index);
 	router.get('/create', controller.create);
 	router.get('/admin/create', controller.create);
 	router.post('/create', controller.save);
+	router.post('/admin/save', controller.save);
 	router.get('/edit/:id', controller.edit);
-	router.post('/edit', controller.save);
+	router.put('/edit', controller.save);
 	router.get('/delete/:id', controller.delete);
 	app.use(router);
 };

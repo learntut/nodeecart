@@ -1,1 +1,28 @@
-this is create
+
+<ol class="breadcrumb">
+	<li class="breadcrumb-item">Home</li>
+</ol>
+<div class="container-fluid">
+	<div class="row">
+    <div class="col-md-12">
+    	<form action="/admin/save" method="post" enctype="multipart/form-data" class="form-horizontal">
+	        <div class="card">
+	            <div class="card-header">
+	                Category
+	            </div>
+	            <div class="card-block">                
+	              <input type="text" id="Categoryname" name="Categoryname" class="form-control" 
+	                        placeholder="Enter Category Name">
+	              <input type="text" id="Title" name="Title" class="form-control" 
+	                        placeholder="Enter Title">
+	              <input type="text" id="Category" name="Category" class="form-control" 
+	                        placeholder="Enter Category">
+	            </div>
+	            <div class="card-footer">
+	                <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+	                <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+	            </div>
+        </form>
+    </div>
+</div>
+<!-- /.conainer-fluid -->
