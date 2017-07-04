@@ -29,9 +29,9 @@ app.engine('hbs',hbsengine.engine);
 app.set('view engine','hbs');
 // set application properties
 // app.use(favicon())
-// app.use(bodyParser.json());
+app.use(bodyParser());
 // app.use(bodyParser.urlencoded());
-app.use(express.bodyParser());
+
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname,'public')));
 // app.use(category);
