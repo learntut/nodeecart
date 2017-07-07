@@ -7,6 +7,8 @@ var exphbs = require('express-handlebars');
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/ShoppingCart');
 var category = require('./server/category/route');
+var adminroute = require('./routes/admin');
+
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
@@ -34,7 +36,7 @@ app.use(bodyParser());
 
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname,'public')));
-// app.use(category);
+adminroute(app);
 category(app);
 // app.get('/', function (req, res, next) {
 //     res.render('index');

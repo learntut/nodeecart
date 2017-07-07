@@ -1,5 +1,5 @@
 var express = require('express');
-var controller = require('./category.controller');
+var controller = require('./categorycontroller');
 var router = express.Router();
 var methodOverride = require('method-override');
 // router.use(methodOverride(function(req, res){
@@ -13,7 +13,8 @@ var methodOverride = require('method-override');
 
 module.exports = function(app) {
 	router.get('/', controller.index);
-	router.get('/create', controller.create);
+	router.get('/admin/category', controller.index);
+	router.get('/admin/category/create', controller.create);
 	router.get('/admin/create', controller.create);
 	router.post('/create', controller.save);
 	router.post('/admin/save', controller.save);

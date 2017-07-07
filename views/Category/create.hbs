@@ -1,7 +1,3 @@
-
-<ol class="breadcrumb">
-	<li class="breadcrumb-item">Home</li>
-</ol>
 <div class="container-fluid">
 	<div class="row">
     <div class="col-md-12">
@@ -10,13 +6,35 @@
 	            <div class="card-header">
 	                Category
 	            </div>
-	            <div class="card-block">                
-	              <input type="text" id="Categoryname" name="Categoryname" class="form-control" 
-	                        placeholder="Enter Category Name">
-	              <input type="text" id="Title" name="Title" class="form-control" 
-	                        placeholder="Enter Title">
-	              <input type="text" id="Category" name="Category" class="form-control" 
-	                        placeholder="Enter Category">
+	            <div class="card-block">
+	            	<div class="form-group row col-md-6">
+						<label class="col-md-4 form-control-label" for="CategoryCode">Category Code</label>
+						<div class="col-md-8">
+							<input type="text" id="CategoryCode" name="CategoryCode" class="form-control" 
+							placeholder="Enter Category Code">
+						</div>
+					</div>
+					<div class="form-group row col-md-6">
+						<label class="col-md-4 form-control-label" for="Categoryname">Category Name</label>
+						<div class="col-md-8">
+							<input type="text" id="Categoryname" name="Categoryname" class="form-control" 
+							placeholder="Enter Category Name">
+						</div>
+					</div>
+					<div class="form-group row col-md-6">
+						<label class="col-md-4 form-control-label" for="Title">Title</label>
+						<div class="col-md-8">
+							<input type="text" id="Title" name="Title" class="form-control" 
+							placeholder="Enter Title">
+						</div>
+					</div>
+					<div class="form-group row col-md-6">
+						<label class="col-md-4 form-control-label" for="CategoryParent">Category</label>
+						<div class="col-md-8">
+							<input type="text" id="CategoryParent" name="CategoryParent" class="form-control" 
+							placeholder="Enter Parent">
+						</div>
+					</div>
 	            </div>
 	            <div class="card-footer">
 	                <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
